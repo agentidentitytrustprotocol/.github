@@ -1,0 +1,20 @@
+name: bump aitp
+# Consumer repos only. Set `ecosystem` (npm | cargo | uv) and `package` to match
+# this repo's manifest, then delete this comment.
+on:
+  repository_dispatch:
+    types: [aitp-released]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Exact aitp version (blank = latest / event payload)'
+        required: false
+        default: ''
+jobs:
+  bump:
+    uses: agentidentitytrustprotocol/aitp-ci/.github/workflows/bump-consume.yml@v1
+    with:
+      ecosystem: npm
+      package: '@agentidentitytrustprotocol/aitp'
+      version: ${{ github.event.inputs.version }}
+    secrets: inherit

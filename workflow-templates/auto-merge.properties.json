@@ -1,0 +1,6 @@
+{
+  "name": "AITP auto-merge",
+  "description": "Auto-merge Dependabot PRs (patch + minor) once required checks pass, via aitp-ci.",
+  "iconName": "octicon-git-merge",
+  "categories": ["Automation"]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "AITP bump-aitp (consumer)",
+  "description": "Open an auto-merging PR when the aitp SDK publishes. Set ecosystem npm|cargo|uv.",
+  "iconName": "octicon-package-dependents",
+  "categories": ["Automation"]
+}
